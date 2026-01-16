@@ -1,76 +1,64 @@
-// Toggle ESP Vision
-const espToggle = document.getElementById('esp-toggle');
-const hiddenData = document.getElementById('hidden-data');
+// --- CHALLENGE 1: THE BOT ARCHITECTURE (SLIDER) ---
+const techSlider = document.getElementById('tech-slider');
+const techWrapper = document.getElementById('tech-wrapper');
 
-espToggle.addEventListener('change', () => {
-    hiddenData.classList.toggle('blurred', !espToggle.checked);
+techSlider.addEventListener('input', (e) => {
+    if (e.target.value == 100) {
+        techWrapper.querySelector('.locked-content').classList.remove('blurred');
+        techWrapper.querySelector('.locked-content').style.opacity = "1";
+        techWrapper.querySelector('.challenge-ui').style.display = 'none';
+        techWrapper.style.borderStyle = "solid";
+    }
 });
 
-// Project Data - Strictly Python focused
-const data = {
-    roblox_py: `
-> [INIT] Executing: python3 roblox_external_v2.py
-> [CORE] Connecting to Game Client via Local Process...
-> [INPUT] Local HID Driver initialized for Movement.
---------------------------------------------------
-PROJECT: EXTERNAL MOVEMENT BOT
-LANGUAGE: Python
-TYPE: Local Execution (External)
+// --- CHALLENGE 2: SELECTED WORKS (HOLD BUTTON) ---
+const holdBtn = document.getElementById('hold-btn');
+const projectWrapper = document.getElementById('projects-wrapper');
 
-DESCRIPTION:
-- Operates locally on the host machine.
-- Manages player inputs and movement logic.
-- Utilizes computer vision and memory reading to 
-  automate tasks without injecting code into 
-  the game client.
---------------------------------------------------
-> STATUS: RUNNING (100% Efficiency)`,
+let holdTimer;
+let holdProgress = 0;
 
-    ai_agent: `
-> [INIT] Executing: python3 ai_thought_partner.py
-> [INFO] Loading Neural Weights via API...
---------------------------------------------------
-METHODOLOGY: AI-DRIVEN DEVELOPMENT
-"The lazy engineer automates the repetitive."
+holdBtn.addEventListener('mousedown', startHold);
+holdBtn.addEventListener('touchstart', startHold);
+holdBtn.addEventListener('mouseup', stopHold);
+holdBtn.addEventListener('touchend', stopHold);
+holdBtn.addEventListener('mouseleave', stopHold);
 
-DESCRIPTION:
-- Relies heavily on LLMs to architect logic.
-- Uses AI to generate Python boilerplates, 
-  allowing focus on high-level automation strategy.
-- Self-taught via AI-augmented research.
---------------------------------------------------
-> STATUS: LINK STABLE`
-};
-
-function runCommand(key) {
-    const log = document.getElementById('output-log');
-    log.innerHTML = "> INITIATING SYSTEM CALL...";
-    let i = 0;
-    const text = data[key];
-
-    setTimeout(() => {
-        log.innerHTML = "";
-        function typeWriter() {
-            if (i < text.length) {
-                log.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 5);
-                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-            }
+function startHold() {
+    holdTimer = setInterval(() => {
+        holdProgress += 2;
+        holdBtn.innerText = `AUTHORIZING... ${holdProgress}%`;
+        if (holdProgress >= 100) {
+            clearInterval(holdTimer);
+            projectWrapper.querySelector('.locked-content').classList.remove('blurred');
+            projectWrapper.querySelector('.locked-content').style.opacity = "1";
+            projectWrapper.querySelector('.challenge-ui').style.display = 'none';
         }
-        typeWriter();
-    }, 600);
+    }, 30);
 }
 
-// Glitch Header Effect
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-document.querySelector(".glitch").onmouseover = event => {
-    let iter = 0;
-    const interval = setInterval(() => {
-        event.target.innerText = event.target.innerText.split("")
-            .map((l, index) => index < iter ? event.target.dataset.text[index] : letters[Math.floor(Math.random() * 36)])
-            .join("");
-        if(iter >= event.target.dataset.text.length) clearInterval(interval);
-        iter += 1 / 3;
-    }, 30);
-};
+function stopHold() {
+    clearInterval(holdTimer);
+    if (holdProgress < 100) {
+        holdProgress = 0;
+        holdBtn.innerText = "HOLD (0%)";
+    }
+}
+
+// Scramble Text Effect for Headings
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.querySelectorAll('.section-title').forEach(title => {
+    title.onmouseover = event => {
+        let iteration = 0;
+        const interval = setInterval(() => {
+            event.target.innerText = event.target.innerText.split("")
+                .map((letter, index) => {
+                    if(index < iteration) return event.target.dataset.value[index];
+                    return letters[Math.floor(Math.random() * 26)];
+                }).join("");
+            if(iteration >= event.target.dataset.value.length) clearInterval(interval);
+            iteration += 1 / 3;
+        }, 30);
+    };
+    title.dataset.value = title.innerText;
+});
