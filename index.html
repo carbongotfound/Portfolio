@@ -1,93 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon | Automation Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <nav class="navbar">
         <div class="logo">CARBON.</div>
         <ul class="nav-links">
             <li><a href="#vision">Vision</a></li>
-            <li><a href="#architecture">Architecture</a></li>
-            <li><a href="#projects">Work</a></li>
+            <li><a href="#roblox-bots">Roblox</a></li>
+            <li><a href="#more-projects">Tools</a></li>
+            <li><a href="#hardware-projects">Hardware</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header class="hero">
-        <div class="profile-container">
-            <img src="https://cdn.discordapp.com/avatars/956167389010075678/afca7938ceb80209e293265fcdde0077.png?size=4096" alt="Carbon" class="profile-pic">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="https://cdn.discordapp.com/avatars/956167389010075678/afca7938ceb80209e293265fcdde0077.png?size=4096"
+                    alt="Carbon" class="profile-pic">
+            </div>
+            <h1>I AM <span class="highlight">CARBON</span>.</h1>
+            <p class="subtitle">I automate the boring stuff so I can focus on the logic.</p>
         </div>
-        <h1>I AM <span class="highlight">CARBON</span>.</h1>
-        <p class="subtitle">I automate the boring stuff so I can focus on the logic.</p>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="line"></div>
+        </div>
     </header>
+
+    <section id="introduction" class="section">
+        <div class="container">
+            <h2 class="section-title" data-value="INTRODUCTION">INTRODUCTION</h2>
+            <div class="vision-main">
+                <h3>I AM CAAAAAAAAAAAAARBON!</h3>
+                <p>A self-taught individual who built a foundation from scratch. I don't just use tools; I build them to
+                    see how far the logic can bend.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer-divider"></div>
 
     <section id="vision" class="section">
         <div class="container">
             <h2 class="section-title" data-value="THE VISION">THE VISION</h2>
-            <div class="content-grid">
-                <div class="text-block">
+            <div class="content-split">
+                <div class="vision-main">
                     <h3>Stop doing manual work</h3>
-                    <p>I don't like wasting time. If I have to do a task more than twice, I build a robot to do it for me. My goal is to turn human effort into autonomous workflows.</p>
+                    <p>I don't like wasting time. If I have to do a task more than twice, I build a bot to do it for
+                        me. My goal is to turn human effort into autonomous workflows.</p>
                 </div>
-                <div class="text-block">
+                <div class="vision-side">
                     <h3>Inspirations</h3>
-                    <p><strong>Italy's Metros:</strong> Driverless trains that move thousands of people using only sensors and code.</p>
-                    <p><strong>Japan's Robotics:</strong> Service robots that handle logistics and hospitality without human friction.</p>
+                    <div class="inspiration-item">
+                        <strong>Italy's Metros</strong>
+                        <p>Driverless trains that move thousands of people using only sensors and code.</p>
+                    </div>
+                    <div class="inspiration-item">
+                        <strong>Japan's Robotics</strong>
+                        <p>Service robots that handle logistics and hospitality without human friction.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="architecture" class="section inverted">
+    <div class="spacer-divider"></div>
+
+    <section id="roblox-bots" class="section">
         <div class="container">
             <h2 class="section-title" data-value="ROBLOX BOTS">ROBLOX BOTS</h2>
-            <p>Roblox bots are controlled by code. There are 2 types: Exploit Bots and External Bots.</p>
-            <div class="architecture-grid">
-                <div class="arch-card">
-                    <h4>Exploit Bots</h4>
-                    <p>Risky and highly detectable. They inject code into the game, which usually leads to bans.</p>
+            <p class="section-intro">Roblox bots are the ultimate test of application manipulation—tricking a system
+                into believing a script is a human participant.</p>
+
+            <div class="bot-types-grid">
+                <div class="bot-type-card danger">
+                    <div class="card-header">
+                        <span class="status-dot red"></span>
+                        <h4>Exploit Bots</h4>
+                    </div>
+                    <p>Highly detectable. These inject code directly into the game engine. High risk, high ban rate.</p>
                 </div>
-                <div class="arch-card">
-                    <h4>External Bots</h4>
-                    <p>Undetectable and safe. I code these in <strong>Python</strong> because it can control the mouse and keyboard like a human. I use the <code>py-roblox-bot</code> library to make characters move and chat.</p>
+                <div class="bot-type-card safe">
+                    <div class="card-header">
+                        <span class="status-dot green"></span>
+                        <h4>External Bots</h4>
+                    </div>
+                    <p>My specialty. Powered by <span class="accent-text">Python</span>, these use human-like mouse and
+                        keyboard inputs, making them virtually undetectable.</p>
                 </div>
+            </div>
+
+            <div class="spacer-large"></div>
+
+            <div class="vision-main">
+                <h3>The "Why" Behind the Code</h3>
+                <p>There is a unique thrill in manipulating applications to perform human actions while you're away.
+                    Whether it's running accounts overnight for in-game perks or building complex "sensors" to detect
+                    and react to players in a shooter, the logic is fascinating. Currently, the community lacks
+                    advanced, autonomous bots—most public source code on GitHub is outdated or basic. I build to push
+                    the ceiling of what's possible.</p>
             </div>
         </div>
     </section>
+
+    <div class="spacer-divider"></div>
 
     <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title" data-value="PROJECTS">PROJECTS</h2>
-            <div class="project-grid">
-                <div class="card">
-                    <h4>Roblox Controller</h4>
-                    <p>A Discord Bot that allows users to control a Roblox account in-game directly from Discord.</p>
+            <h2 class="section-title" data-value="ROBLOX PROJECTS">ROBLOX PROJECTS</h2>
+            <div class="fields-grid">
+
+                <div class="field-item">
+                    <div class="field-label">ROBLOX_01</div>
+                    <div class="field-content">
+                        <h4>Website to Roblox</h4>
+                        <p>A full-scale web dashboard with interactive buttons to control an in-game bot. Inspired by
+                            the "Control a Real Bot" genre on Roblox.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Kahoot Roblox Bot</h4>
-                    <p>A safer alternative to exploits. It works exactly like a real Kahoot bot but runs externally.</p>
+
+                <div class="field-item">
+                    <div class="field-label">ROBLOX_02</div>
+                    <div class="field-content">
+                        <h4>Roblox Controller</h4>
+                        <p>A Discord-integrated bridge that allows users to send real-time commands to a Roblox account
+                            via bot tokens.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Control Bot</h4>
-                    <p>Allows other users in the game to control my character using chat commands like "!forward 5".</p>
+
+                <div class="field-item">
+                    <div class="field-label">ROBLOX_03</div>
+                    <div class="field-content">
+                        <h4>Kahoot Roblox Bot</h4>
+                        <p>An external automation tool that mirrors Kahoot bot behavior within the Roblox environment
+                            without using exploits.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Pls Donate Bot</h4>
-                    <p>Earned 500+ Robux running overnight. It tells dad jokes for tips (5 Robux per joke).</p>
+
+                <div class="field-item">
+                    <div class="field-label">ROBLOX_04</div>
+                    <div class="field-content">
+                        <h4>Control Bot</h4>
+                        <p>A chat-logic bot that grants control of my character to other players via specific chat
+                            commands like "!forward 5".</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Speed Typer Bot</h4>
-                    <p>A chat game that challenges users to type long messages and tracks their completion time.</p>
+
+                <div class="field-item">
+                    <div class="field-label">ROBLOX_05</div>
+                    <div class="field-content">
+                        <h4>Pls Donate Bot</h4>
+                        <p>An overnight revenue generator. It automatically tells dad jokes for 5 Robux tips; earned
+                            500+ Robux in one session.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h4>Multi Message Bot</h4>
-                    <p>The simplest one. Input a message in the console, and it broadcasts to every active Roblox PID.</p>
+
+                <div class="field-item">
+                    <div class="field-label">ROBLOX_06</div>
+                    <div class="field-content">
+                        <h4>Speed Typer Bot</h4>
+                        <p>A competitive chat bot that challenges players to type long strings and accurately logs their
+                            completion speed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer-large"></div>
+
+    <section id="capabilities" class="section">
+        <div class="container">
+            <h2 class="section-title" data-value="BEYOND THE SANDBOX">BEYOND THE SANDBOX</h2>
+            <div class="vision-main">
+                <h3>Roblox is just the beginning.</h3>
+                <p>Automation isn't platform-specific. I build autonomous agents for various games, social platforms,
+                    and productivity workflows where logic can be applied.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="more-projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-value="MORE PROJECTS">MORE PROJECTS</h2>
+            <div class="fields-grid">
+                <div class="field-item">
+                    <div class="field-label">AUTOMATION_01</div>
+                    <div class="field-content">
+                        <h4>YouTube Content Bot</h4>
+                        <p>A fully autonomous pipeline that scrapes trending memes from Reddit, processes them into
+                            formatted Shorts, adds watermarks, and posts them to YouTube daily.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">GAME_BOT_01</div>
+                    <div class="field-content">
+                        <h4>Arma Reforger: Narcos Life</h4>
+                        <p>An efficiency bot built for the Narcos Life Roleplay. It automates the resource loop by
+                            navigating to iron deposits, mining, and handling the processing stage.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">DISCORD_01</div>
+                    <div class="field-content">
+                        <h4>Slooper Bot</h4>
+                        <p>A Discord-based collection game and replica of the famous Cat Bot. Users must react quickly
+                            to "Sloopers" that appear randomly in designated channels.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">AI_01</div>
+                    <div class="field-content">
+                        <h4>Rogue Admin AI</h4>
+                        <p>A powerful Discord management tool with high-level API access. It can autonomously modify
+                            server metadata, names, and complex administrative settings on command.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">UTILITY_01</div>
+                    <div class="field-content">
+                        <h4>PDF Summarizer AI</h4>
+                        <p>Available on Web and Discord, this tool uses LLMs to digest long PDF documents and allows
+                            users to ask follow-up questions regarding the content.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">GAME_BOT_02</div>
+                    <div class="field-content">
+                        <h4>ArtifactsMMO Agent</h4>
+                        <p>A sophisticated automation for ArtifactsMMO that handles combat, resting, and resource
+                            purchasing. Includes a version built on n8n with integrated AI logic.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">CHAOS_01</div>
+                    <div class="field-content">
+                        <h4>Grass Bot</h4>
+                        <p>A Discord bot designed for humor. It insults active chatters, tells them to "touch grass,"
+                            and randomly infiltrates voice channels to play high-decibel audio clips.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer-divider"></div>
+
+    <section id="hardware-intro" class="section">
+        <div class="container">
+            <h2 class="section-title" data-value="PHYSICAL LOGIC">PHYSICAL LOGIC</h2>
+            <div class="vision-main">
+                <h3>Fortunately, It doesn't end there...</h3>
+                <p>I bridge the gap between code and reality. I am proficient in hardware engineering, utilizing
+                    Arduinos and ESP32 microcontrollers with full WiFi integration to bring automation into the physical
+                    world.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hardware-projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-value="MUCH MORE PROJECTS">MUCH MORE PROJECTS</h2>
+            <div class="fields-grid">
+                <div class="field-item">
+                    <div class="field-label">HARDWARE_01</div>
+                    <div class="field-content">
+                        <h4>2-Player Reaction System</h4>
+                        <p>A competitive hardware setup where two players race to trigger a physical button when an LED
+                            flashes green. Includes a built-in point tracking and buzzer system.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">HARDWARE_02</div>
+                    <div class="field-content">
+                        <h4>Ultrasonic Race Measurement</h4>
+                        <p>A precision timing tool. After a 5-second countdown with an audible beep, it uses ultrasonic
+                            sensors to detect passage and displays the exact elapsed time on an LCD screen.</p>
+                    </div>
+                </div>
+
+                <div class="field-item">
+                    <div class="field-label">HARDWARE_03</div>
+                    <div class="field-content">
+                        <h4>The Torture Bot</h4>
+                        <p>A cross-platform bridge allowing anyone on Discord to trigger a loud, real-life buzzer in my
+                            room via a simple bot command.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,13 +315,14 @@
     <footer id="contact">
         <div class="container">
             <h2 class="section-title" data-value="CONTACT">CONTACT</h2>
-            <p>Extra Curious? Find me on Discord.</p>
-            <p class="discord-tag">@flash_speed3412</p>
+            <div class="contact-box">
+                <p>Impressed? Find me on Discord.</p>
+                <a href="#" class="discord-tag">@flash_speed3412</a>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
-
-
