@@ -11,89 +11,70 @@
 
     <nav class="navbar">
         <div class="logo">CARBON.</div>
-        <ul class="nav-links">
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#tech">Architecture</a></li>
-            <li><a href="#projects">Work</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="#tech">Architecture</a>
+            <a href="#projects">Work</a>
+        </div>
     </nav>
 
     <header class="hero">
         <div class="profile-container">
-            <img src="https://cdn.discordapp.com/avatars/956167389010075678/afca7938ceb80209e293265fcdde0077.png?size=4096" alt="Carbon Profile" class="profile-pic">
+            <img src="https://cdn.discordapp.com/avatars/956167389010075678/afca7938ceb80209e293265fcdde0077.png?size=4096" alt="Carbon" class="profile-pic">
         </div>
-        <h1>I am <span class="highlight">Carbon</span>.</h1>
-        <p class="subtitle">I build the bots that do the work for me.</p>
-        <div class="scroll-hint">Unlock the system below ↓</div>
+        <h1>I AM <span class="highlight">CARBON</span></h1>
+        <p class="subtitle">I BUILD BOTS THAT WORK SO I DON'T HAVE TO.</p>
     </header>
 
     <section id="tech" class="section">
-        <div class="container">
-            <h2 class="section-title">The Bot Architecture</h2>
-            
-            <div class="security-wrapper" id="tech-wrapper">
-                <div class="challenge-ui">
-                    <p class="challenge-instruction">Security Check: Slide to Authenticate</p>
-                    <input type="range" min="0" max="100" value="0" class="unlock-slider" id="tech-slider">
-                </div>
+        <h2 class="section-title">// THE_BOT_ARCHITECTURE</h2>
+        
+        <div class="challenge-box" id="tech-challenge">
+            <p>SECURITY CHECK: SLIDE TO AUTHENTICATE</p>
+            <input type="range" min="0" max="100" value="0" class="slider" id="tech-slider">
+        </div>
 
-                <div class="locked-content blurred">
-                    <div class="text-block">
-                        <h3>Exploit vs. External</h3>
-                        <p>There are two ways to automate Roblox: <strong>Exploit Bots</strong> and <strong>External Bots</strong>.</p>
-                        <p>Exploits are risky and easily detected. I build <strong>External Bots</strong>. These are undetectable because they don't touch the game's internal code. Instead, they control the mouse and keyboard like a human would.</p>
-                        <p>I use <strong>Python</strong> because it’s the ultimate engine for this. Using libraries like <code>py-roblox-bot</code>, I can make a character move, chat, and react to anything in the game environment without ever getting banned.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="content-box hidden" id="tech-content">
+            <h3>EXPLOIT VS. EXTERNAL</h3>
+            <p>Exploits are high-risk. I build <strong>External Bots</strong>. They simulate human input (mouse/keyboard) instead of injecting code, making them undetectable.</p>
+            <p>Powered by <strong>Python</strong> and <code>py-roblox-bot</code>, these systems can move, chat, and react locally on the host machine.</p>
         </div>
     </section>
 
-    <section id="projects" class="section inverted">
-        <div class="container">
-            <h2 class="section-title">Selected Works</h2>
+    <section id="projects" class="section dark">
+        <h2 class="section-title">// SELECTED_WORKS</h2>
 
-            <div class="security-wrapper" id="projects-wrapper">
-                <div class="challenge-ui">
-                    <p class="challenge-instruction">Hold Button to Authorize Data Access</p>
-                    <button class="hold-btn" id="hold-btn">HOLD (0%)</button>
-                </div>
+        <div class="challenge-box" id="work-challenge">
+            <p>HOLD TO AUTHORIZE DATA ACCESS</p>
+            <button class="hold-btn" id="hold-btn">HOLD (0%)</button>
+        </div>
 
-                <div class="locked-content blurred">
-                    <div class="project-grid">
-                        <div class="project-card">
-                            <h3>Roblox Controller</h3>
-                            <p>A Discord-to-Roblox bridge. It allows me to control an active Roblox account directly through Discord commands.</p>
-                        </div>
-                        <div class="project-card">
-                            <h3>Kahoot Roblox Bot</h3>
-                            <p>A safe, non-exploitative alternative to Kahoot bots. It replicates exploit-level speed and accuracy through external logic.</p>
-                        </div>
-                        <div class="project-card">
-                            <h3>Control Bot</h3>
-                            <p>Character puppetry. This allows other players in the game to move my character using chat commands like "!forward 5".</p>
-                        </div>
-                        <div class="project-card">
-                            <h3>Pls Donate Bot</h3>
-                            <p>Automated monetization. This bot runs overnight, telling dad jokes for Robux tips. It has successfully generated over 500 Robux autonomously.</p>
-                        </div>
-                        <div class="project-card">
-                            <h3>Speed Typer Bot</h3>
-                            <p>A chat-based reaction game. It challenges users to type long messages and tracks their time. A proof-of-concept for chat-detection logic.</p>
-                        </div>
-                        <div class="project-card">
-                            <h3>Multi Message Bot</h3>
-                            <p>The simplest automation. It scans every Roblox PID on the system and broadcasts a single message across all instances simultaneously.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="project-grid hidden" id="work-content">
+            <div class="card">
+                <h4>Roblox Controller</h4>
+                <p>Discord-to-Roblox bridge. Remote control for accounts via Discord commands.</p>
+            </div>
+            <div class="card">
+                <h4>Kahoot Bot</h4>
+                <p>Safe, external alternative to traditional exploits. Replicates speed via logic.</p>
+            </div>
+            <div class="card">
+                <h4>Control Bot</h4>
+                <p>Puppetry system. Other players control my character via chat commands.</p>
+            </div>
+            <div class="card">
+                <h4>Pls Donate Bot</h4>
+                <p>Automated monetization. Overnight dad-joke bot. Earned 500+ Robux.</p>
+            </div>
+            <div class="card">
+                <h4>Speed Typer</h4>
+                <p>Chat reaction game. Proof-of-concept for high-speed chat detection.</p>
+            </div>
+            <div class="card">
+                <h4>Multi-Msg</h4>
+                <p>Simultaneous broadcast. Sends inputs to every active Roblox PID.</p>
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Carbon. Engineered for Automation.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
