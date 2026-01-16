@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon | System Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="hud">
+        <div class="hud-item">USER: CARBON</div>
+        <div class="hud-item">STATUS: ONLINE</div>
+        <div class="hud-item toggle-container">
+            <span>ESP MODE:</span>
+            <label class="switch">
+                <input type="checkbox" id="esp-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="profile-wrapper">
+            <img src="https://cdn.discordapp.com/avatars/956167389010075678/afca7938ceb80209e293265fcdde0077.png?size=4096"
+                alt="Carbon" class="avatar">
+            <div class="scan-line"></div>
+        </div>
+
+        <h1 class="glitch" data-text="CARBON">CARBON</h1>
+        <p class="subtitle">AUTOMATION // SCRIPTING // AI</p>
+
+        <div class="scroll-indicator">
+            <span>SCROLL TO INITIALIZE</span>
+        </div>
+    </section>
+
+    <section class="content-section" id="vision">
+        <h2>// CLASSIFIED_INTEL</h2>
+        <p class="instruction">[!] ENABLE ESP MODE IN TOP RIGHT TO DECRYPT DATA</p>
+
+        <div class="redacted-content blurred" id="hidden-data">
+            <p>
+                <strong>The Philosophy:</strong> Efficiency is not laziness; it is intelligence applied to effort.
+                I do not perform tasks; I design systems that perform them for me.
+            </p>
+            <p>
+                <strong>The Inspiration:</strong>
+                <span class="highlight">Italy Metro Systems:</span> Driverless, sensor-based, flawless.
+                <br>
+                <span class="highlight">Japan Robotics:</span> Service without intervention.
+            </p>
+            <p>
+                My goal is absolute automation. If I have to click it twice, I write a script to do it once.
+            </p>
+        </div>
+    </section>
+
+    <section class="content-section" id="projects">
+        <h2>// EXECUTABLES</h2>
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">root@carbon:~</span>
+            </div>
+            <div class="terminal-body" id="terminal-output">
+                <p>> Select a module to run...</p>
+                <div class="command-list">
+                    <button class="cmd-btn" onclick="runCommand('roblox_bot')">./run roblox_bot.exe</button>
+                    <button class="cmd-btn" onclick="runCommand('ai_workflow')">./run ai_workflow.py</button>
+                    <button class="cmd-btn" onclick="runCommand('contact_info')">./cat contact.txt</button>
+                </div>
+                <div id="output-log"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>SYSTEM ARCHITECTURE BY CARBON © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
