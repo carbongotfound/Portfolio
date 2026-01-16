@@ -21,36 +21,39 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <header class="hero">
         <div class="profile-wrapper">
             <div class="avatar-container">
                 <img src="https://cdn.discordapp.com/avatars/956167389010075678/afca7938ceb80209e293265fcdde0077.png?size=4096" alt="Carbon" class="avatar">
             </div>
             <div class="scan-line"></div>
         </div>
-        
         <h1 class="glitch" data-text="CARBON">CARBON</h1>
-        <p class="subtitle">AUTOMATION // PYTHON // AI-AUGMENTED</p>
-    </section>
+        <p class="subtitle">EXTERNAL AUTOMATION // PYTHON // AI-AUGMENTED</p>
+    </header>
 
     <section class="content-section" id="vision">
-        <h2>// CLASSIFIED_INTEL</h2>
-        <p class="instruction">[!] ENABLE ESP MODE TO DECRYPT VISION_DATA</p>
+        <h2>// MISSION_PARAMETER</h2>
+        <p class="instruction">[!] ACTIVATE ESP TO VIEW ENCRYPTED LOGS</p>
         
         <div class="redacted-content blurred" id="hidden-data">
-            <p><strong>The Vision:</strong> I transform manual labor into automated cycles. If it can be calculated, it can be automated.</p>
+            <p class="bio-text">
+                I am an efficiency-driven developer focused on **Python External Automation**. 
+                Inspired by autonomous transit in Italy and robotics in Japan, I build scripts that 
+                handle inputs and movements locally to eliminate human intervention.
+            </p>
             
             <div class="knowledge-grid">
                 <div class="k-card" onclick="this.classList.toggle('flipped')">
                     <div class="k-inner">
-                        <div class="k-front">METRO_LOGIC</div>
-                        <div class="k-back">Inspired by Italian autonomous metros: High-efficiency, zero-intervention transit.</div>
+                        <div class="k-front">[+] METRO_LOGIC</div>
+                        <div class="k-back">Autonomous transit systems prove that complex movement is best handled by logic, not hands.</div>
                     </div>
                 </div>
                 <div class="k-card" onclick="this.classList.toggle('flipped')">
                     <div class="k-inner">
-                        <div class="k-front">ROBOTIC_SERVICE</div>
-                        <div class="k-back">Japanese service robotics: Turning hospitality into precise, sensor-based decision making.</div>
+                        <div class="k-front">[+] ROBOTIC_ZEN</div>
+                        <div class="k-back">Japan's service robots represent my goal: Seamless execution without human friction.</div>
                     </div>
                 </div>
             </div>
@@ -58,25 +61,28 @@
     </section>
 
     <section class="content-section" id="projects">
-        <h2>// RUNNABLE_MODULES</h2>
-        
+        <h2>// PROJECT_RUNTIMES</h2>
         <div class="terminal-window">
             <div class="terminal-header">
                 <span class="dot red"></span>
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
-                <span class="title">carbon@system:~/automation</span>
+                <span class="title">carbon@local_host:~/python_scripts</span>
             </div>
-            <div class="terminal-body" id="terminal-output">
-                <p>> System initialized. Runtimes: Python 3.12, AI-Core.</p>
-                <p>> Select a module to execute:</p>
+            <div class="terminal-body">
+                <p class="terminal-meta">> Python 3.12 detected. Runtimes optimized.</p>
+                <p class="terminal-meta">> Click a module to execute command:</p>
                 
-                <div class="command-list">
-                    <div class="category-label">_GAME_AUTOMATION</div>
-                    <button class="cmd-btn" onclick="runCommand('roblox_py')">python3 roblox_external.py</button>
+                <div class="button-grid">
+                    <button class="action-btn" onclick="runCommand('roblox_py')">
+                        <span class="btn-icon">⚡</span>
+                        <span class="btn-text">run_roblox_external.py</span>
+                    </button>
                     
-                    <div class="category-label">_AI_SYSTEMS</div>
-                    <button class="cmd-btn" onclick="runCommand('ai_agent')">python3 ai_thought_partner.py</button>
+                    <button class="action-btn" onclick="runCommand('ai_agent')">
+                        <span class="btn-icon">🤖</span>
+                        <span class="btn-text">ai_logic_partner.py</span>
+                    </button>
                 </div>
                 <div id="output-log"></div>
             </div>
@@ -84,7 +90,7 @@
     </section>
 
     <footer>
-        <p>SYSTEM_CARBON v2.0 // 2026</p>
+        <p>TERMINAL_CARBON // BUILT WITH AI & PYTHON // 2026</p>
     </footer>
 
     <script src="script.js"></script>
