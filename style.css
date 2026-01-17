@@ -63,7 +63,7 @@ h1 { font-family: var(--font-heading); font-size: clamp(3rem, 8vw, 5rem); letter
 }
 .field-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
 .field-content h4 { margin-bottom: 10px; text-transform: uppercase; font-size: 1.1rem; }
-.field-content p { color: var(--fg-muted); font-size: 0.95rem; margin-bottom: 10px; }
+.field-content p { color: var(--fg-muted); font-size: 0.95rem; margin-bottom: 15px; }
 
 /* Contact */
 .contact-box { padding-top: 40px; }
@@ -78,62 +78,86 @@ h1 { font-family: var(--font-heading); font-size: clamp(3rem, 8vw, 5rem); letter
     .nav-links { display: none; }
 }
 
-/* === NEW IMAGE POPUP STYLES === */
+/* === MODAL & LINK STYLES === */
+
+/* The Link Styling - Small, White, Underlined */
 .source-link {
     display: inline-block;
-    margin-top: auto; /* Push to bottom */
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    color: var(--success); 
-    text-decoration: none;
-    border-bottom: 1px dashed var(--success);
+    font-size: 0.7rem; /* Small size */
+    color: #ffffff;    /* Pure White */
+    text-decoration: underline; /* Underline */
+    cursor: pointer;
     transition: opacity 0.3s;
     width: fit-content;
 }
 
-.source-link:hover { opacity: 0.8; cursor: pointer; }
+.source-link:hover {
+    opacity: 0.7;
+}
 
-/* Modal (Popup) Background */
+/* The Modal Background */
 .modal {
     display: none; 
     position: fixed; 
-    z-index: 2000; 
+    z-index: 9999; /* Very high z-index to stay on top */
     padding-top: 50px; 
     left: 0; top: 0; width: 100%; height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.95); 
-    backdrop-filter: blur(5px);
+    background-color: rgba(0,0,0,0.92); /* Dark overlay */
+    backdrop-filter: blur(8px);
 }
 
-/* Modal Image */
+/* The Image Frame */
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
+    width: auto;
+    max-width: 85%;
     max-height: 85vh;
-    object-fit: contain;
-    border: 1px solid #333;
+    
+    /* THE WIDE BORDER FRAME AESTHETIC */
+    border: 10px solid #ffffff; 
+    background-color: #000;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    
     animation-name: zoom;
     animation-duration: 0.3s;
 }
 
+/* Animation */
 @keyframes zoom {
-    from {transform:scale(0.8); opacity: 0;} 
+    from {transform:scale(0.9); opacity: 0;} 
     to {transform:scale(1); opacity: 1;}
 }
 
-/* Close Button */
+/* The Custom X Button */
 .close {
     position: absolute;
     top: 20px;
     right: 40px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 300;
+    font-family: Arial, sans-serif; /* Clean font for X */
     transition: 0.3s;
+    line-height: 1;
+    z-index: 10000;
     cursor: pointer;
-    font-family: var(--font-body);
-    z-index: 2001;
 }
 
-.close:hover { color: var(--danger); }
+.close:hover {
+    color: var(--danger);
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        max-width: 95%;
+        border-width: 5px; /* Thinner border on mobile */
+    }
+    .close {
+        top: 10px;
+        right: 20px;
+    }
+}
